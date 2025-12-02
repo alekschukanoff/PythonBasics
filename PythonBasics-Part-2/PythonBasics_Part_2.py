@@ -64,12 +64,12 @@ def say_hello(name):
 
 # Задача 5. Напишите лямбда-функцию для возведения числа в квадрат.
 
-sqrt = lambda x: x**2
-s = sqrt(5)
-print(s)       #25
+# sqrt = lambda x: x**2
+# s = sqrt(5)
+# print(s)       #25
 
-sm = lambda x,y: x+y
-print(sm(2,4))  #6
+# sm = lambda x,y: x+y
+# print(sm(2,4))  #6
 
 # Задача 6. Напишите функцию apply(func, x), которая принимает функцию и число, 
 # применяет функцию к числу и возвращает результат. Пример:
@@ -89,3 +89,54 @@ print(sm(2,4))  #6
 # print(res)   #6
 
 # apply(say_hello, 'Вася')
+
+
+# Задача 7. С помощью map возведите список чисел [1, 2, 3, 4] в квадрат.
+# def square(number):
+#     return number ** 2
+
+# numbers = [1, 2, 3, 4]
+
+# # Apply the 'square' function to each number in the 'numbers' list
+# squared_numbers_map = map(square, numbers)
+# print(type(squared_numbers_map))
+
+# # Convert the map object to a list to see the results
+# squared_numbers_list = list(squared_numbers_map)
+# print(squared_numbers_list)
+
+# plus_one_map = map(lambda x:x+1, numbers)
+# plus_one_list = list(plus_one_map)
+# print(plus_one_list)
+
+# Задача 8. С помощью filter оставьте только чётные числа из списка [5, 8, 11, 14].
+
+# ls = [5, 8, 11, 14]
+
+# def isEven(num):
+#      return num % 2 == 0
+
+# even_fl = filter(isEven, ls)
+# print(list(even_fl))
+
+# Задача 9. Используя reduce (из модуля functools), найдите произведение 
+# всех чисел в списке [1, 2, 3, 4, 5].
+
+# from functools import reduce 
+
+# def multiplay(x,y):
+#     return x * y
+
+# ls = [1, 2, 3, 4, 5]
+# s = reduce(multiplay, ls)
+# print(s)   #120
+
+# Задача 10. Напишите функцию, которая принимает список строк и возвращает список их длин с помощью map.
+
+ls = ['hello', 'bye', 'hola']
+
+def str_length(st):
+    return len(st)
+
+st_len_map = map(str_length, ls)
+print(list(st_len_map))
