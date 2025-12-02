@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>e4b7e610-b290-4993-a570-8d8b550c2a89</ProjectGuid>
+    <ProjectGuid>6b02a5cf-e19e-4f5d-9a04-9e4f820569c2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonBasics.py</StartupFile>
+    <StartupFile>PythonBasics_Part_2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PythonBasics</Name>
-    <RootNamespace>PythonBasics</RootNamespace>
+    <Name>PythonBasics-Part-2</Name>
+    <RootNamespace>PythonBasics-Part-2</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonBasics.py" />
+    <Compile Include="PythonBasics_Part_2.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
