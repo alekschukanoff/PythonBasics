@@ -133,10 +133,27 @@ def say_hello(name):
 
 # Задача 10. Напишите функцию, которая принимает список строк и возвращает список их длин с помощью map.
 
-ls = ['hello', 'bye', 'hola']
+# ls = ['hello', 'bye', 'hola']
 
-def str_length(st):
-    return len(st)
+# def str_length(st):
+#     return len(st)
 
-st_len_map = map(str_length, ls)
-print(list(st_len_map))
+# st_len_map = map(str_length, ls)
+# print(list(st_len_map))
+
+# OOP
+# Задача 11. Создайте класс Dog, у которого есть атрибут name и метод bark(), выводящий "Гав-гав!".
+
+class Dog():
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(f'{self.name}: Гав-гав-гав!')
+
+sharick = Dog('Шарик')
+print(type(sharick)) #<class '__main__.Dog'>
+print(sharick.name)  #Шарик
+sharick.bark()  #Шарик: Гав-гав-гав!
+sharick.name = "Матроскин"
+print(sharick.name)  #Матроскин
