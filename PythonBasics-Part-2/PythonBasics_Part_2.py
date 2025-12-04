@@ -144,16 +144,108 @@ def say_hello(name):
 # OOP
 # Задача 11. Создайте класс Dog, у которого есть атрибут name и метод bark(), выводящий "Гав-гав!".
 
-class Dog():
-    def __init__(self, name):
-        self.name = name
+# class Dog():
+#     def __init__(self, name):
+#         self.name = name
 
-    def bark(self):
-        print(f'{self.name}: Гав-гав-гав!')
+#     def bark(self):
+#         print(f'{self.name}: Гав-гав-гав!')
 
-sharick = Dog('Шарик')
-print(type(sharick)) #<class '__main__.Dog'>
-print(sharick.name)  #Шарик
-sharick.bark()  #Шарик: Гав-гав-гав!
-sharick.name = "Матроскин"
-print(sharick.name)  #Матроскин
+# sharik = Dog('Шарик')
+# print(type(sharik)) #<class '__main__.Dog'>
+# print(sharik.name)  #Шарик
+# sharik.bark()  #Шарик: Гав-гав-гав!
+# sharik.name = "Матроскин"
+# print(sharik.name)  #Матроскин
+
+# sharik.bark = lambda :print('Мяу!')
+# sharik.bark()  #Мяу!
+
+# class Dog2():
+#   def __init__(self, name):
+#     self.name = name
+#   def bark(self, voice = 'Гав-гав!'):
+#     print(voice)
+# sharik = Dog2('Шарик')
+# print(sharik)
+# print(type(sharik))
+
+# sharik.bark("Мяу!")
+
+# Задача 12. Создайте класс Rectangle, у которого есть методы для вычисления площади и периметра.
+
+# class Rectangle():
+#     def __init__(self, x, y):
+#         self.x = self.y = 0
+
+#         if x >= 0 and y >= 0:
+#             self.x = x
+#             self.y = y            
+
+#     def square(self):
+#         return self.x * self.y
+
+#     def perim(self):
+#         return (self.x + self.y) * 2
+    
+# rec = Rectangle(5, 10)
+# print(rec.square())  #50
+# print(rec.perim())   #30
+
+# rec = Rectangle(5, -10)
+# print(rec.square())  #0
+# print(rec.perim())   #0
+
+# Задача 13. Создайте класс Person и класс Student, 
+# наследующийся от Person. Добавьте в Student метод study().
+
+# class Person():
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def birthday_pass(self):
+#         return self.age + 1
+
+# class Student(Person):
+#     def __init__(self, name, age, subject):         
+#         super().__init__(name, age)
+#         self.subject = subject
+
+#     def study(self):
+#         print(f'{self.name} сидит за книжками по {self.subject}')
+
+# st = Student('Alex', 62, "AI/ML")
+# st.study()  #Alex сидит за книжками по AI/ML
+
+# ps = Person('Petr', 40)
+# age = ps.birthday_pass()
+# print(ps.name, age) #Petr 41
+
+#Задача 14. Реализуйте класс Car с приватным атрибутом __speed. 
+#Добавьте методы для увеличения и уменьшения скорости.
+
+class Car():
+   
+    def __init__(self):
+        self.__speed = 0 
+
+    def up_speed(self):
+        if self.__speed < 190:
+            self.__speed += 10
+            print(f"speeding +++ {self.__speed}")
+
+    def down_speed(self):
+        if self.__speed > 0:
+            self.__speed -= 10
+            print(f"breaking --- {self.__speed}")
+
+car = Car()
+
+car.up_speed()  #speeding +++ 10
+car.up_speed()  #speeding +++ 20
+car.up_speed()  #speeding +++ 30
+car.up_speed()  #speeding +++ 40
+
+car.down_speed()    #speeding +++ 30
+car.down_speed()    #speeding +++ 20
