@@ -9,6 +9,9 @@
 
 ## Задача 2. Напишите функцию, которая принимает имя пользователя и выводит приветствие.
 
+from math import pi
+
+
 def say_hello(name):
      print(f'Привет, {name}!')
 
@@ -225,27 +228,31 @@ def say_hello(name):
 #Задача 14. Реализуйте класс Car с приватным атрибутом __speed. 
 #Добавьте методы для увеличения и уменьшения скорости.
 
-class Car():
+# class Car():
    
-    def __init__(self):
-        self.__speed = 0 
+#     def __init__(self):
+#         self.__speed = 0 
 
-    def up_speed(self):
-        if self.__speed < 190:
-            self.__speed += 10
-            print(f"speeding +++ {self.__speed}")
+#     def up_speed(self):
+#         if self.__speed < 190:
+#             self.__speed += 10
+#             print(f"speeding +++ {self.__speed}")
 
-    def down_speed(self):
-        if self.__speed > 0:
-            self.__speed -= 10
-            print(f"breaking --- {self.__speed}")
+#     def down_speed(self):
+#         if self.__speed > 0:
+#             self.__speed -= 10
+#             print(f"breaking --- {self.__speed}")
 
-car = Car()
+# car = Car()
 
-car.up_speed()  #speeding +++ 10
-car.up_speed()  #speeding +++ 20
-car.up_speed()  #speeding +++ 30
-car.up_speed()  #speeding +++ 40
+# car.up_speed()  #speeding +++ 10
+# car.up_speed()  #speeding +++ 20
+# car.up_speed()  #speeding +++ 30
+# car.up_speed()  #speeding +++ 40
 
-car.down_speed()    #speeding +++ 30
-car.down_speed()    #speeding +++ 20
+# car.down_speed()    #speeding --- 30
+# car.down_speed()    #speeding --- 20
+
+#Задача 15. Создайте класс MathUtils с методом класса pi() (возвращает число 3.14) и статическим методом add(a, b), 
+#который возвращает сумму.
+
