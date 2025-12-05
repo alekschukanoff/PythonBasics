@@ -256,3 +256,71 @@ def say_hello(name):
 #Задача 15. Создайте класс MathUtils с методом класса pi() (возвращает число 3.14) и статическим методом add(a, b), 
 #который возвращает сумму.
 
+# class MathUtils():
+
+#     # constr по умолчанию
+
+#     @classmethod          # Class.method_name()
+#     def pi(MathUtils, x): #pi(cls, x)
+#         return 3.14 * 2
+
+#     @staticmethod
+#     def add(a, b):
+#         return a + b
+
+# mu = MathUtils()
+
+# a = 6
+# b = 8
+# print(mu.add(a,b))
+# print(MathUtils.add(a,b))
+
+# print(mu.pi(2))
+# print(MathUtils.pi(2))
+
+#Задача 16. Создайте класс Vector, который описывает двумерный вектор с координатами x и y.
+
+# Реализуйте магические методы:
+# o str для красивого вывода вида (x, y)
+# o add для сложения двух векторов
+# o sub для вычитания
+# o eq для проверки равенства векторов
+# o lt и gt для сравнения длин векторов.
+# Продемонстрируйте работу на примерах.
+
+class Vector():
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return (f'{self.x},{self.y}')
+
+    def __add__(self, other):        
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):        
+        return Vector(self.x - other.x, self.y - other.y)
+
+    def __eq__(self, other):        
+        return self.x == other.x and self.y == other.y
+
+    def __lt__(self, other):        
+        return self.x < other.x and self.y < other.y
+
+vc1 = Vector(3, 4) 
+vc2 = Vector(5, 6) 
+
+print(vc1)        #3,4
+print(vc2)        #5,6
+vc3 = vc1 + vc2
+
+print(type(vc3))  #<class '__main__.Vector'>
+print(vc3)        #8,10
+
+vc4 = vc2 - vc1
+print(vc4)        #2,2
+
+print(vc1 == vc2) #false
+print(vc1 == vc1) #true
+print(vc1 < vc2)  #true
